@@ -1,4 +1,4 @@
-import { Button, Checkbox, FormControlLabel } from "@mui/material";
+import { Box, Button, Checkbox, FormControlLabel } from "@mui/material";
 import {
   Favorite,
   FavoriteBorder,
@@ -18,7 +18,8 @@ function App() {
     setGo(false);
   }
 
-  function onSubmitKissForm() {
+  function onSubmitKissForm(e) {
+    e.preventDefault();
     console.log(go);
   }
 
@@ -26,29 +27,33 @@ function App() {
     <div>
       <h1>Bora dar uns Beijo?</h1>
       <form name="kiss-form" onSubmit={onSubmitKissForm}>
-        <FormControlLabel
-          label={"Sim"}
-          control={
-            <Checkbox
-              icon={<FavoriteBorder />}
-              checkedIcon={<Favorite />}
-              checked={go}
-              onChange={onChangeGo}
+        <Box display="flex" alignItems="flex-start">
+          <div>
+            <FormControlLabel
+              label={"Sim"}
+              control={
+                <Checkbox
+                  icon={<FavoriteBorder />}
+                  checkedIcon={<Favorite />}
+                  checked={go}
+                  onChange={onChangeGo}
+                />
+              }
             />
-          }
-        />
-        <FormControlLabel
-          label={"Não"}
-          control={
-            <Checkbox
-              icon={<ThumbDownOffAlt />}
-              checkedIcon={<ThumbDownAlt />}
-              checked={!go}
-              onChange={onChangeNoGO}
+            <FormControlLabel
+              label={"Não"}
+              control={
+                <Checkbox
+                  icon={<ThumbDownOffAlt />}
+                  checkedIcon={<ThumbDownAlt />}
+                  checked={!go}
+                  onChange={onChangeNoGO}
+                />
+              }
             />
-          }
-        />
-        <Button type="submit">Enviar</Button>
+          </div>
+          <Button type="submit">Enviar</Button>
+        </Box>
       </form>
     </div>
   );
