@@ -5,8 +5,19 @@ import {
   ThumbDownOffAlt,
   ThumbDownAlt,
 } from "@mui/icons-material";
+import { useState } from "react";
 
 function App() {
+  const [go, setGo] = useState(true);
+
+  function onChangeGo() {
+    setGo(true);
+  }
+
+  function onChangeNoGO() {
+    setGo(false);
+  }
+
   return (
     <div>
       <h1>Bora dar uns Beijo?</h1>
@@ -14,12 +25,14 @@ function App() {
         <Checkbox
           icon={<BookmarkBorderIcon />}
           checkedIcon={<BookmarkIcon />}
-          name="check"
+          checked={go}
+          onChange={onChangeGo}
         />
         <Checkbox
           icon={<ThumbDownOffAlt />}
           checkedIcon={<ThumbDownAlt />}
-          name="check"
+          checked={!go}
+          onChange={onChangeNoGO}
         />
       </form>
     </div>
