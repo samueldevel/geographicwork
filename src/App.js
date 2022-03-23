@@ -1,4 +1,4 @@
-import { Checkbox } from "@mui/material";
+import { Button, Checkbox, FormControlLabel } from "@mui/material";
 import {
   Favorite,
   FavoriteBorder,
@@ -18,22 +18,37 @@ function App() {
     setGo(false);
   }
 
+  function onSubmitKissForm() {
+    console.log(go);
+  }
+
   return (
     <div>
       <h1>Bora dar uns Beijo?</h1>
-      <form>
-        <Checkbox
-          icon={<FavoriteBorder />}
-          checkedIcon={<Favorite />}
-          checked={go}
-          onChange={onChangeGo}
+      <form name="kiss-form" onSubmit={onSubmitKissForm}>
+        <FormControlLabel
+          label={"Sim"}
+          control={
+            <Checkbox
+              icon={<FavoriteBorder />}
+              checkedIcon={<Favorite />}
+              checked={go}
+              onChange={onChangeGo}
+            />
+          }
         />
-        <Checkbox
-          icon={<ThumbDownOffAlt />}
-          checkedIcon={<ThumbDownAlt />}
-          checked={!go}
-          onChange={onChangeNoGO}
+        <FormControlLabel
+          label={"Não"}
+          control={
+            <Checkbox
+              icon={<ThumbDownOffAlt />}
+              checkedIcon={<ThumbDownAlt />}
+              checked={!go}
+              onChange={onChangeNoGO}
+            />
+          }
         />
+        <Button type="submit">Enviar</Button>
       </form>
     </div>
   );
