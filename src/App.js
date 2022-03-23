@@ -27,7 +27,7 @@ function App() {
     <div>
       <h1>Bora dar uns Beijo?</h1>
       <form name="kiss-form" onSubmit={onSubmitKissForm}>
-        <Box display="flex" alignItems="flex-start">
+        <Box display="flex" alignItems="flex-start" flexDirection={"column"}>
           <div>
             <FormControlLabel
               label={"Sim"}
