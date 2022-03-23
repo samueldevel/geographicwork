@@ -1,4 +1,10 @@
-import { Box, Button, Checkbox, FormControlLabel } from "@mui/material";
+import {
+  Box,
+  Button,
+  Checkbox,
+  FormControlLabel,
+  Typography,
+} from "@mui/material";
 import {
   Favorite,
   FavoriteBorder,
@@ -52,6 +58,8 @@ function App() {
               }
             />
           </div>
+          <Typography>Data do beijo</Typography>
+          <input type="date" disabled={!go} />
           <Button type="submit">Enviar</Button>
         </Box>
       </form>
