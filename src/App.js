@@ -1,9 +1,9 @@
 import { Checkbox } from "@mui/material";
 import {
-  BookmarkBorderIcon,
-  BookmarkIcon,
-  ThumbDownOffAlt,
+  Favorite,
+  FavoriteBorder,
   ThumbDownAlt,
+  ThumbDownOffAlt,
 } from "@mui/icons-material";
 import { useState } from "react";
 
@@ -23,8 +23,8 @@ function App() {
       <h1>Bora dar uns Beijo?</h1>
       <form>
         <Checkbox
-          icon={<BookmarkBorderIcon />}
-          checkedIcon={<BookmarkIcon />}
+          icon={<FavoriteBorder />}
+          checkedIcon={<Favorite />}
           checked={go}
           onChange={onChangeGo}
         />
