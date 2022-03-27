@@ -1,4 +1,18 @@
-.principal-title {
-  margin-top: 30px;
-  text-align: center;
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.image {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text-box {
+  align-self: flex-start;
+}
+
+.fullscreen:hover {
+  cursor: pointer; 
 }
