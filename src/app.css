@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
+.mark-bold {
+  color: red;
+}
+
 .text-box {
   align-self: flex-start;
 }
