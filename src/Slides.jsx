@@ -21,17 +21,18 @@ export function FirstSlide() {
 
       <FlexBox justifyContent="space-between">
         <Box className="text-box">
-          <Text></Text>
-          <Text fontSize={25}>
-            Por ser a maior bacia hidrográfica do Brasil e do mundo, a{' '}
-            <b>Bacia Amazônica</b> possui grande importância ambiental uma vez
-            que detém uma das maiores quantidades de água doce do planeta
-          </Text>
-          <Text fontSize={25}>
-            A <b>Bacia Amazônica</b>, em conjunto com a Bacia do{' '}
-            <b>Tocantins-Araguaia </b>, forma o mais complexo sistema de água
-            doce do mundo.
-          </Text>
+          <div className="fix-boxdiv">
+            <Text fontSize={25}>
+              Por ser a maior bacia hidrográfica do Brasil e do mundo, a{' '}
+              <b>Bacia Amazônica</b> possui grande importância ambiental uma vez
+              que detém uma das maiores quantidades de água doce do planeta
+            </Text>
+            <Text fontSize={25}>
+              A <b>Bacia Amazônica</b>, em conjunto com a Bacia do{' '}
+              <b>Tocantins-Araguaia </b>, forma o mais complexo sistema de água
+              doce do mundo.
+            </Text>
+          </div>
         </Box>
 
         <Image
@@ -72,7 +73,7 @@ export function SecondSlide() {
           </div>
         </Box>
 
-        <Image className="image" size="40%" height="70vh" src={relevoImage} />
+        <Image className="image" size="40%" height="100%" src={relevoImage} />
       </FlexBox>
     </Slide>
   );
