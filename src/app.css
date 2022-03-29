@@ -14,9 +14,19 @@ body {
 }
 
 .text-box {
+  height: 100%;
   align-self: flex-start;
 }
 
 .fullscreen:hover {
   cursor: pointer; 
+}
+
+#relevo-two {
+  padding-left: 35px;     
+}
+
+.fix-boxdiv {
+  position: relative;
+  bottom: 5%;
 }
