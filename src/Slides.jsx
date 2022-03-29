@@ -16,14 +16,14 @@ export function FirstSlide() {
     <Slide>
       <FullScreen className="fullscreen" />
       <Heading fontSize={45} color="primary">
-        Hidrografia
+        Hidrografia!!!!
       </Heading>
 
       <FlexBox justifyContent="space-between">
         <Box className="text-box">
           <div className="fix-boxdiv">
             <Text fontSize={25}>
-              Por ser a maior bacia hidrográfica do Brasil e do mundo, a{' '}
+              Por ser a maior baciahidrográfica do Brasil e do mundo, a{' '}
               <b>Bacia Amazônica</b> possui grande importância ambiental uma vez
               que detém uma das maiores quantidades de água doce do planeta
             </Text>
