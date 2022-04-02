@@ -1,7 +1,9 @@
+import ReactTypingEffect from 'react-typing-effect';
+
 import {
   FlexBox,
-  Text,
   Heading,
+  Text,
   Slide,
   Image,
   Box,
@@ -11,7 +13,39 @@ import regiaoHidrografica from './assets/regiao_hidrográfica_amazônica.jpeg';
 import relevoImage from './assets/relevo_image.jpeg';
 import relevoTwoImage from './assets/relevo2_image.jpeg';
 
-export function FirstSlide() {
+export function WellcomeSlide() {
+  return (
+    <>
+      <Slide>
+        <FullScreen className="fullscreen" />
+        <ReactTypingEffect
+          text={'Domínio Morfoclimático da Amazônia'}
+          cursorRenderer={(cursor) => (
+            <Heading fontSize={50} style={{ marginLeft: '-50px' }}>
+              {cursor}
+            </Heading>
+          )}
+          displayTextRenderer={(text) => {
+            return (
+              <Heading fontSize={50} color="primary">
+                {text.split('').map((char, i) => {
+                  const key = `${i}`;
+                  return (
+                    <span key={key} style={i % 2 === 0 ? { color: '' } : {}}>
+                      {char}
+                    </span>
+                  );
+                })}
+              </Heading>
+            );
+          }}
+        />
+      </Slide>
+    </>
+  );
+}
+
+export function FirstSlideHydrography() {
   return (
     <Slide>
       <FullScreen className="fullscreen" />
@@ -46,7 +80,7 @@ export function FirstSlide() {
   );
 }
 
-export function SecondSlide() {
+export function SecondSlideRelief() {
   return (
     <Slide>
       <FullScreen className="fullscreen" />
@@ -65,7 +99,7 @@ export function SecondSlide() {
             <div id="relevo-two">
               <Image
                 className="image"
-                size="90%"
+                size="70%"
                 height="30vh"
                 src={relevoTwoImage}
               />
@@ -73,7 +107,7 @@ export function SecondSlide() {
           </div>
         </Box>
 
-        <Image className="image" size="40%" height="100%" src={relevoImage} />
+        <Image className="image" size="50%" height="100%" src={relevoImage} />
       </FlexBox>
     </Slide>
   );
