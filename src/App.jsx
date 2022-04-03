@@ -1,16 +1,20 @@
 import { Deck } from 'spectacle';
 import {
-  FirstSlideHydrography,
-  SecondSlideRelief,
-  WellcomeSlide,
+  ClimateSlide,
+  HydrographySlide,
+  ReliefSlide,
+  SoilSlide,
+  VegetationSlide,
 } from './Slides.jsx';
 
 function App() {
   return (
     <Deck>
-      <WellcomeSlide />
-      <FirstSlideHydrography />
-      <SecondSlideRelief />
+      <ReliefSlide />
+      <VegetationSlide />
+      <HydrographySlide />
+      <SoilSlide />
+      <ClimateSlide />
     </Deck>
   );
 }
