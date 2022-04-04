@@ -1,3 +1,4 @@
+import ReactTypingEffect from 'react-typing-effect';
 import {
   FlexBox,
   Heading,
@@ -14,9 +15,42 @@ import vegetacao from './assets/vegetacao.jpeg';
 import solo from './assets/solo.jpeg';
 import clima from './assets/clima.jpeg';
 
+export function ApresentationSlide() {
+  return (
+    <Slide className="slide">
+      <FullScreen className="fullscreen" />
+      <ReactTypingEffect
+        text={'Zona Morfoclimática da Amazônia'}
+        speed={100}
+        cursorRenderer={(cursor) => (
+          <div style={{ position: 'relative', right: 80 }}>
+            <Heading style={{ color: 'pink' }} fontSize={45} color="primary">
+              {cursor}
+            </Heading>
+          </div>
+        )}
+        displayTextRenderer={(text) => {
+          return (
+            <Heading fontSize={45} color="primary">
+              {text.split('').map((char, i) => {
+                const key = `${i}`;
+                return (
+                  <span key={key} style={i % 2 === 0 ? { color: '' } : {}}>
+                    {char}
+                  </span>
+                );
+              })}
+            </Heading>
+          );
+        }}
+      />
+    </Slide>
+  );
+}
+
 export function HydrographySlide() {
   return (
-    <Slide>
+    <Slide className="slide">
       <FullScreen className="fullscreen" />
       <Heading fontSize={45} color="primary">
         Hidrografia
@@ -51,7 +85,7 @@ export function HydrographySlide() {
 
 export function ReliefSlide() {
   return (
-    <Slide>
+    <Slide className="slide">
       <FullScreen className="fullscreen" />
       <Heading fontSize={50} color="primary">
         Relevo
@@ -84,7 +118,7 @@ export function ReliefSlide() {
 
 export function VegetationSlide() {
   return (
-    <Slide>
+    <Slide className="slide">
       <FullScreen className="fullscreen" />
       <Heading fontSize={50} color="primary">
         Vegetação
@@ -116,7 +150,7 @@ export function VegetationSlide() {
 
 export function SoilSlide() {
   return (
-    <Slide>
+    <Slide className="slide">
       <FullScreen className="fullscreen" />
       <Heading fontSize={50} color="primary">
         Solo
@@ -140,7 +174,7 @@ export function SoilSlide() {
 
 export function ClimateSlide() {
   return (
-    <Slide>
+    <Slide className="slide">
       <FullScreen className="fullscreen" />
       <Heading fontSize={50} color="primary">
         Clima

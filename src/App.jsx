@@ -1,5 +1,6 @@
 import { Deck } from 'spectacle';
 import {
+  ApresentationSlide,
   ClimateSlide,
   HydrographySlide,
   ReliefSlide,
@@ -10,6 +11,7 @@ import {
 function App() {
   return (
     <Deck>
+      <ApresentationSlide />
       <ReliefSlide />
       <VegetationSlide />
       <HydrographySlide />

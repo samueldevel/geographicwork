@@ -30,3 +30,10 @@ body {
   position: relative;
   bottom: 5%;
 }
+
+.slide {
+  background-image: url('./assets/bomdia.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
